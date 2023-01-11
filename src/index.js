@@ -9,9 +9,6 @@ let richmondTime = moment().tz("America/New_York");
 richmondDateElement.innerHTML = richmondTime.format(`MMMM Do, YYYY`);
 richmondTimeElement.innerHTML = richmondTime.format("h:mm:ss:SS [<small>]A[</small>]");
 
-
-
-
 let monzaElement = document.querySelector("#monza");
 let monzaDateElement = monzaElement.querySelector(".date");
 let monzaTimeElement = monzaElement.querySelector(".time");
@@ -34,10 +31,11 @@ function updateCity(event) {
     <h2>${cityName}</h2>
     <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
 </div>
-    <div class="time">${cityTime.format("h:mm:ss:SS")}<small>${cityTime.format("A")}</small></div>
+    <div class="time">${cityTime.format("h:mm:ss:")}<small>${cityTime.format("A")}</small></div>
 </div>
 <a href="/">Homepage</a>
 `;
+
 }
 
 updateTime();
